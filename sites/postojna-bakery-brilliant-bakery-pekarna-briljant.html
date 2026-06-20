@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>document.documentElement.classList.add('js');</script>
+<title>Brilliant Bakery - Pekarna Briljant — Lokalno podjetje · Postojna</title>
+<meta name="description" content="Brilliant Bakery v Postojni, vaša izbira za sveže in okusne pekovske dobrote. Obiščite nas na Titovem trgu!">
+<!-- Module 35 — SEO / social / structured data (baked once, reusable) -->
+<link rel="canonical" href="https://demo-sites.pages.dev/sites/postojna-bakery-brilliant-bakery-pekarna-briljant.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Brilliant Bakery - Pekarna Briljant — Lokalno podjetje">
+<meta property="og:description" content="Brilliant Bakery v Postojni, vaša izbira za sveže in okusne pekovske dobrote. Obiščite nas na Titovem trgu!">
+<meta property="og:image" content="https://demo-sites.pages.dev/sites/postojna-bakery-brilliant-bakery-pekarna-briljant.html/og-cover.jpg">
+<meta property="og:url" content="https://demo-sites.pages.dev/sites/postojna-bakery-brilliant-bakery-pekarna-briljant.html">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Brilliant Bakery - Pekarna Briljant",
+  "description": "Brilliant Bakery v Postojni, vaša izbira za sveže in okusne pekovske dobrote. Obiščite nas na Titovem trgu!",
+  "address": "Titov trg 3, 6230 Postojna",
+  "telephone": "031 249 498",
+  "url": "https://demo-sites.pages.dev/sites/postojna-bakery-brilliant-bakery-pekarna-briljant.html",
+  "image": "https://demo-sites.pages.dev/sites/postojna-bakery-brilliant-bakery-pekarna-briljant.html/og-cover.jpg",
+  "openingHours": "",
+  "geo": { "@type": "GeoCoordinates", "latitude": "", "longitude": "" },
+  "priceRange": "€€"
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;500;700&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --background:#0A0A0A;
+    --foreground:#FAFAFA;
+    --muted:#1A1A1A;
+    --muted-fg:#737373;
+    --secondary-fg:#D4D4D4;
+    --accent:#1B3A6B;
+    --accent-fg:#FFFFFF;
+    --border:#262626;
+    --card:#0F0F0F;
+
+    --font-sans:"Inter Tight","Inter",system-ui,sans-serif;
+    --font-display:"Playfair Display",Georgia,serif;
+    --font-mono:"JetBrains Mono","Fira Code",monospace;
+
+    --ease:cubic-bezier(0.25,0,0,1);
+    --container:1200px;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:120px}
+
+  body{
+    background:var(--background);
+    color:var(--foreground);
+    font-family:var(--font-sans);
+    font-size:1rem;
+    line-height:1.6;
+    letter-spacing:-0.01em;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+    position:relative;
+  }
+
+  /* Grain texture overlay */
+  body::after{
+    content:"";
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    z-index:9999;
+    opacity:0.015;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  ::selection{background:var(--accent);color:var(--accent-fg)}
+
+  a{color:inherit;text-decoration:none}
+  ul{list-style:none}
+
+  .container{
+    max-width:var(--container);
+    margin:0 auto;
+    padding:0 24px;
+  }
+  @media(min-width:768px){.container{padding:0 48px}}
+  @media(min-width:1024px){.container{padding:0 64px}}
+
+  /* ---------- Typography helpers ---------- */
+  .label{
+    font-family:var(--font-mono);
+    font-size:0.75rem;
+    letter-spacing:0.2em;
+    text-transform:uppercase;
+    color:var(--muted-fg);
+  }
+  .accent{color:color-mix(in srgb,var(--accent) 70%,#fff)}
+  .serif{font-family:var(--font-display)}
+
+  h1,h2,h3{font-weight:700;letter-spacing:-0.04em;line-height:1.05}
+
+  /* ---------- Demo banner ---------- */
+  .demo-banner{
+    background:var(--accent);
+    color:var(--accent-fg);
+    font-family:var(--font-mono);
+    font-size:0.72rem;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    text-align:center;
+    padding:9px 16px;
+    position:relative;
+    z-index:101;
+  }
+
+  /* ---------- Nav ---------- */
+  header{
+    position:sticky;top:0;z-index:100;
+    background:rgba(10,10,10,0.78);
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--border);
+  }
+  .nav{
+    display:flex;align-items:center;justify-content:space-between;
+    height:72px;gap:16px;
+  }
+  .logo{
+    display:inline-flex;align-items:center;gap:12px;min-width:0;
+  }
+  .logo .mark{
+    flex-shrink:0;
+    width:38px;height:38px;
+    display:grid;place-items:center;
+    background:var(--accent);color:var(--accent-fg);
+    font-weight:800;font-size:1rem;letter-spacing:0;
+  }
+  .logo .name{
+    font-weight:700;font-size:1.02rem;letter-spacing:-0.03em;
+    white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+    max-width:46vw;
+  }
+  @media(min-width:880px){.logo .name{max-width:340px}}
+  .nav-links{display:none;align-items:center;gap:36px}
+  @media(min-width:880px){.nav-links{display:flex}}
+  .nav-links a{
+    font-size:0.875rem;color:var(--muted-fg);
+    transition:color .15s var(--ease);position:relative;
+  }
+  .nav-links a::after{
+    content:"";position:absolute;left:0;bottom:-6px;
+    height:1px;width:100%;background:var(--accent);
+    transform:scaleX(0);transform-origin:left;
+    transition:transform .2s var(--ease);
+  }
+  .nav-links a:hover{color:var(--foreground)}
+  .nav-links a:hover::after{transform:scaleX(1)}
+
+  .nav-right{display:flex;align-items:center;gap:20px}
+
+  /* Primary text button (underline) */
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;
+    font-weight:600;text-transform:uppercase;letter-spacing:0.1em;
+    color:color-mix(in srgb,var(--accent) 70%,#fff);
+    background:none;border:none;cursor:pointer;
+    font-family:var(--font-sans);font-size:0.875rem;
+    padding:8px 0;position:relative;white-space:nowrap;
+    transition:all .15s var(--ease);
+  }
+  .btn .underline{
+    position:absolute;left:0;bottom:0;height:2px;width:100%;
+    background:var(--accent);transform:scaleX(1);transform-origin:left;
+    transition:transform .15s var(--ease);
+  }
+  .btn:hover .underline{transform:scaleX(1.12)}
+  .btn:active{transform:translateY(1px)}
+  .btn .arrow{transition:transform .2s var(--ease)}
+  .btn:hover .arrow{transform:translateX(4px)}
+  .btn.lg{font-size:1.05rem;padding:12px 0}
+  .nav .btn{font-size:0.8rem}
+  @media(max-width:879px){.nav .btn{display:none}}
+
+  /* Solid button */
+  .btn-solid{
+    display:inline-flex;align-items:center;gap:10px;
+    background:var(--accent);color:var(--accent-fg);
+    padding:16px 32px;font-weight:600;text-transform:uppercase;
+    letter-spacing:0.1em;font-size:0.9rem;cursor:pointer;border:1px solid var(--accent);
+    font-family:var(--font-sans);transition:all .2s var(--ease);
+  }
+  .btn-solid:hover{background:transparent;color:var(--foreground)}
+
+  /* ---------- Sections ---------- */
+  section{position:relative}
+  .pad{padding:88px 0}
+  @media(min-width:768px){.pad{padding:120px 0}}
+  .pad-lg{padding:120px 0}
+  @media(min-width:768px){.pad-lg{padding:170px 0}}
+  .bordered{border-top:1px solid var(--border)}
+  .bg-muted{background:var(--muted)}
+
+  /* section eyebrow label with bar */
+  .eyebrow{display:flex;align-items:center;gap:14px;margin-bottom:40px}
+  .eyebrow .bar{height:2px;width:48px;background:var(--accent)}
+
+  h2.big{
+    font-size:2rem;font-weight:700;letter-spacing:-0.04em;line-height:1.08;
+  }
+  @media(min-width:768px){h2.big{font-size:2.75rem}}
+  @media(min-width:1024px){h2.big{font-size:3.25rem}}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    padding:90px 0 96px;position:relative;overflow:hidden;
+  }
+  .hero-bg{
+    position:absolute;inset:0;z-index:0;pointer-events:none;
+    background:radial-gradient(115% 80% at 78% -5%,
+      color-mix(in srgb,var(--accent) 20%,transparent),
+      transparent 55%);
+  }
+  @media(min-width:768px){.hero{padding:130px 0 140px}}
+  .hero .container{position:relative;z-index:1}
+  .hero .label{margin-bottom:32px;display:block}
+  .hero h1{
+    font-size:2.5rem;font-weight:800;letter-spacing:-0.05em;line-height:1.04;
+    margin-bottom:34px;max-width:18ch;
+    text-shadow:0 0 80px rgba(250,250,250,0.12);
+  }
+  @media(min-width:560px){.hero h1{font-size:3.2rem}}
+  @media(min-width:768px){.hero h1{font-size:4.2rem}}
+  @media(min-width:1024px){.hero h1{font-size:5rem}}
+  .hero-sub{
+    font-family:var(--font-display);font-style:italic;
+    font-size:1.35rem;color:var(--secondary-fg);
+    margin-bottom:40px;max-width:32ch;line-height:1.4;
+  }
+  @media(min-width:768px){.hero-sub{font-size:1.7rem}}
+  .hero-actions{display:flex;flex-wrap:wrap;align-items:center;gap:32px}
+  .hero-phone{
+    font-family:var(--font-mono);color:var(--foreground);
+    font-size:1rem;letter-spacing:0.05em;
+    display:inline-flex;align-items:center;gap:10px;
+    transition:color .15s var(--ease);
+  }
+  .hero-phone:hover{color:color-mix(in srgb,var(--accent) 70%,#fff)}
+  .hero-small{
+    font-size:0.875rem;color:var(--secondary-fg);margin-top:56px;max-width:420px;
+    border-left:2px solid var(--accent);padding-left:18px;line-height:1.6;
+  }
+
+  /* ---------- About ---------- */
+  .about-grid{display:grid;gap:48px}
+  @media(min-width:900px){.about-grid{grid-template-columns:5fr 7fr;gap:80px;align-items:start}}
+  .about-text p{color:#d4d4d4;font-size:1.0625rem;line-height:1.75;margin-bottom:18px}
+  .about-text p:last-child{margin-bottom:0}
+
+  /* ---------- Cards (services / why us) ---------- */
+  .cards{display:grid;gap:1px;background:var(--border);border:1px solid var(--border);margin-top:56px}
+  @media(min-width:640px){.cards{grid-template-columns:repeat(2,1fr)}}
+  @media(min-width:1024px){.cards{grid-template-columns:repeat(3,1fr)}}
+  .card{
+    background:var(--card);
+    padding:40px 32px;
+    transition:background .2s var(--ease);
+  }
+  .card:hover{background:var(--muted)}
+  .card .icon{
+    font-size:1.7rem;line-height:1;margin-bottom:22px;
+    filter:grayscale(0.2);
+  }
+  .card h3{
+    font-size:1.15rem;font-weight:700;letter-spacing:-0.02em;
+    margin-bottom:12px;
+  }
+  .card p{color:var(--secondary-fg);font-size:0.98rem;line-height:1.65}
+
+  /* ---------- Contact CTA (inverted) ---------- */
+  .cta{
+    background:var(--foreground);color:var(--background);
+    text-align:center;position:relative;overflow:hidden;
+  }
+  .cta .label{color:rgba(10,10,10,0.55)}
+  .cta h2{
+    font-size:2.2rem;font-weight:800;letter-spacing:-0.05em;line-height:1.02;
+    margin:28px 0 18px;
+  }
+  @media(min-width:768px){.cta h2{font-size:4rem}}
+  @media(min-width:1024px){.cta h2{font-size:4.8rem}}
+  .cta .sub{font-size:1.2rem;color:rgba(10,10,10,0.7);margin-bottom:44px}
+  .cta-actions{display:flex;flex-direction:column;align-items:center;gap:28px}
+  .cta-phone{
+    display:inline-flex;align-items:center;gap:12px;
+    font-family:var(--font-mono);font-size:1.4rem;letter-spacing:0.02em;font-weight:700;
+    color:var(--background);border-bottom:3px solid var(--accent);
+    padding-bottom:6px;transition:color .15s var(--ease);
+  }
+  @media(min-width:768px){.cta-phone{font-size:1.9rem}}
+  .cta-phone:hover{color:var(--accent)}
+  .cta-address{
+    font-style:normal;font-size:1rem;color:rgba(10,10,10,0.6);
+    font-family:var(--font-mono);letter-spacing:0.02em;
+  }
+  .cta .btn-dark{
+    border:1px solid var(--background);color:var(--background);
+    padding:16px 36px;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;
+    font-size:0.9rem;transition:all .2s var(--ease);display:inline-flex;gap:10px;align-items:center;
+  }
+  .cta .btn-dark:hover{background:var(--accent);border-color:var(--accent);color:var(--accent-fg)}
+
+  /* ---------- Footer ---------- */
+  footer{
+    padding:72px 0 48px;border-top:1px solid var(--border);position:relative;
+    background:radial-gradient(90% 140% at 100% 100%,
+      color-mix(in srgb,var(--accent) 14%,transparent),
+      transparent 60%);
+  }
+  .footer-grid{display:grid;gap:40px}
+  @media(min-width:768px){.footer-grid{grid-template-columns:2fr 1fr 1fr;gap:48px}}
+  .footer-logo{
+    display:inline-flex;align-items:center;gap:12px;margin-bottom:18px;
+  }
+  .footer-logo .mark{
+    width:34px;height:34px;display:grid;place-items:center;flex-shrink:0;
+    background:var(--accent);color:var(--accent-fg);font-weight:800;font-size:0.9rem;
+  }
+  .footer-logo .name{font-weight:800;font-size:1.2rem;letter-spacing:-0.04em}
+  .footer-tag{color:var(--muted-fg);font-size:0.95rem;line-height:1.6;max-width:320px}
+  .footer-tag .serif{font-family:var(--font-display);font-style:italic;color:#a3a3a3}
+  .footer-col h4{
+    font-family:var(--font-mono);font-size:0.7rem;letter-spacing:0.2em;
+    text-transform:uppercase;color:var(--muted-fg);margin-bottom:18px;font-weight:500;
+  }
+  .footer-col a{
+    display:block;color:#a3a3a3;font-size:0.95rem;padding:6px 0;
+    transition:color .15s var(--ease);
+  }
+  .footer-col a:hover{color:color-mix(in srgb,var(--accent) 70%,#fff)}
+  .footer-address{
+    font-style:normal;color:#a3a3a3;font-size:0.95rem;line-height:1.8;
+  }
+  .footer-bottom{
+    margin-top:64px;padding-top:28px;border-top:1px solid var(--border);
+    display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;
+    font-size:0.8rem;color:var(--muted-fg);font-family:var(--font-mono);letter-spacing:0.05em;
+  }
+
+  /* ---------- Mobile menu ---------- */
+  .burger{
+    display:flex;flex-direction:column;gap:5px;background:none;border:none;
+    cursor:pointer;padding:6px;
+  }
+  @media(min-width:880px){.burger{display:none}}
+  .burger span{width:24px;height:2px;background:var(--foreground);transition:all .2s var(--ease)}
+  .mobile-menu{
+    display:none;border-top:1px solid var(--border);background:var(--background);
+    padding:8px 0 24px;
+  }
+  .mobile-menu.open{display:block}
+  .mobile-menu a{
+    display:block;padding:16px 24px;font-size:1.05rem;color:var(--foreground);
+    border-bottom:1px solid var(--border);
+  }
+  .mobile-menu .btn{margin:24px 24px 0;font-size:0.95rem;display:inline-flex}
+
+  /* ---------- Scroll reveal ---------- */
+  .reveal{opacity:1;transform:none;transition:opacity .6s var(--ease),transform .6s var(--ease)}
+  .js .reveal{opacity:0;transform:translateY(24px)}
+  .js .reveal.in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){
+    .reveal,.js .reveal{opacity:1;transform:none;transition:none}
+    html{scroll-behavior:auto}
+  }
+</style>
+</head>
+<body id="top">
+
+<!-- ================= DEMO BANNER ================= -->
+<div class="demo-banner">BREZPLAČNI DEMO PRIKAZ za Brilliant Bakery - Pekarna Briljant — če vam je všeč, nas kontaktirajte!</div>
+
+<!-- ================= NAV ================= -->
+<header>
+  <div class="container">
+    <nav class="nav">
+      <a href="#top" class="logo">
+        <span class="mark">BB</span>
+        <span class="name">Brilliant Bakery - Pekarna Briljant</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#onas">O nas</a></li>
+        <li><a href="#storitve">Storitve</a></li>
+        <li><a href="#zakajmi">Zakaj mi</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+      <div class="nav-right">
+        <a class="btn" href="tel:031249498">
+          031 249 498 <span class="arrow">→</span><span class="underline"></span>
+        </a>
+        <button class="burger" id="burger" aria-label="Meni">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#onas">O nas</a>
+    <a href="#storitve">Storitve</a>
+    <a href="#zakajmi">Zakaj mi</a>
+    <a href="#kontakt">Kontakt</a>
+    <a class="btn" href="tel:031249498">
+      031 249 498 <span class="arrow">→</span><span class="underline"></span>
+    </a>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="container">
+    <span class="label">Lokalno podjetje · Postojna</span>
+    <h1>Kjer se svežina sreča z okusom</h1>
+    <p class="hero-sub serif">Brilliant Bakery - Pekarna Briljant</p>
+    <div class="hero-actions">
+      <a class="btn-solid" href="tel:031249498">Pokličite nas</a>
+      <a class="hero-phone" href="tel:031249498">📞 031 249 498</a>
+    </div>
+    <p class="hero-small">Titov trg 3, 6230 Postojna</p>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="pad bordered" id="onas">
+  <div class="container">
+    <div class="about-grid">
+      <div class="reveal">
+        <div class="eyebrow"><span class="bar"></span><span class="label">O nas</span></div>
+        <h2 class="big">Lokalno podjetje v kraju Postojna, ki mu lahko zaupate.</h2>
+      </div>
+      <div class="about-text reveal">
+        <p>Pekarna Briljant je vaš zanesljiv partner za sveže in okusne pekovske izdelke v srcu Postojne. Obiskovalcem že vrsto let prinašamo toplino domačih okusov z vsakim grižljajem.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section class="pad bordered bg-muted" id="storitve">
+  <div class="container">
+    <div class="reveal">
+      <div class="eyebrow"><span class="bar"></span><span class="label">Storitve</span></div>
+      <h2 class="big">Kaj ponujamo</h2>
+    </div>
+    <div class="cards reveal">
+      <div class="card">
+          <div class="icon">🔧</div>
+          <h3>Bureki</h3>
+          <p>Sveže pripravljeni bureki z različnimi nadevi.</p>
+        </div>
+        <div class="card">
+          <div class="icon">🚿</div>
+          <h3>Dnevni kruh</h3>
+          <p>Pestro izbiro vrst kruha pečemo vsak dan.</p>
+        </div>
+        <div class="card">
+          <div class="icon">🔥</div>
+          <h3>Slaščice</h3>
+          <p>Sladke dobrote za vsak okus in priložnost.</p>
+        </div>
+        <div class="card">
+          <div class="icon">♨️</div>
+          <h3>Pite</h3>
+          <p>Domiselne pite s sezonskim sadjem in nadevi.</p>
+        </div>
+        <div class="card">
+          <div class="icon">🛠️</div>
+          <h3>Zajtrk paketki</h3>
+          <p>Okusen zajtrk za na pot, vsak dan svež.</p>
+        </div>
+        <div class="card">
+          <div class="icon">🧰</div>
+          <h3>Kava za s seboj</h3>
+          <p>Aromatična kava, ki vas poživi na poti ali doma.</p>
+        </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHY US ================= -->
+<section class="pad bordered" id="zakajmi">
+  <div class="container">
+    <div class="reveal">
+      <div class="eyebrow"><span class="bar"></span><span class="label">Zakaj mi</span></div>
+      <h2 class="big">Zakaj izbrati nas</h2>
+    </div>
+    <div class="cards reveal">
+      <div class="card">
+          <div class="icon">✅</div>
+          <h3>Domačni okusi</h3>
+          <p>Pri nas diši tako kot v maminem domu.</p>
+        </div>
+        <div class="card">
+          <div class="icon">⭐</div>
+          <h3>Lokalna tradicija</h3>
+          <p>Skrbimo za naše lokalne prebivalce z ljubeznijo.</p>
+        </div>
+        <div class="card">
+          <div class="icon">🏆</div>
+          <h3>Zanesljiva kakovost</h3>
+          <p>Vsak izdelek pripravimo s strastjo in pozornostjo.</p>
+        </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT / CTA ================= -->
+<section class="pad-lg cta" id="kontakt">
+  <div class="container">
+    <span class="label">Kontakt</span>
+    <h2>Pokličite nas</h2>
+    <p class="sub">Z veseljem vam svetujemo in odgovorimo na vsa vprašanja.</p>
+    <div class="cta-actions">
+      <a class="cta-phone" href="tel:031249498">📞 031 249 498</a>
+      <address class="cta-address">Titov trg 3, 6230 Postojna</address>
+      <a class="btn-dark" href="tel:031249498">Pokličite zdaj <span>→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">
+          <span class="mark">BB</span>
+          <span class="name">Brilliant Bakery - Pekarna Briljant</span>
+        </div>
+        <p class="footer-tag"><span class="serif">Kjer se svežina sreča z okusom</span></p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigacija</h4>
+        <a href="#onas">O nas</a>
+        <a href="#storitve">Storitve</a>
+        <a href="#zakajmi">Zakaj mi</a>
+        <a href="#kontakt">Kontakt</a>
+      </div>
+      <div class="footer-col">
+        <h4>Kontakt</h4>
+        <address class="footer-address">
+          Titov trg 3, 6230 Postojna<br>
+          <a href="tel:031249498">031 249 498</a>
+        </address>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Brilliant Bakery - Pekarna Briljant</span>
+      <span>Demo stran · Spletna Ponudba</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Mobile menu
+  var burger = document.getElementById('burger');
+  var menu = document.getElementById('mobileMenu');
+  burger.addEventListener('click', function(){ menu.classList.toggle('open'); });
+  menu.addEventListener('click', function(e){
+    if(e.target.tagName === 'A'){ menu.classList.remove('open'); }
+  });
+
+  // Scroll reveal
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); }
+      });
+    }, {threshold:0.12});
+    document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+  }else{
+    document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); });
+  }
+</script>
+</body>
+</html>
